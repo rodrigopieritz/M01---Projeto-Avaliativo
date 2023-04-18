@@ -11,8 +11,7 @@ async function doctorRegister(request, response) {
       education_institution: request.body.education_institution,
       crm: request.body.crm,
       specialization: request.body.specialization,
-      status: request.body.status,  
-      total_attendances: request.body.total_attendances,
+      status: request.body.status,
     };
 
     const doctorExists = await Doctor.findOne({

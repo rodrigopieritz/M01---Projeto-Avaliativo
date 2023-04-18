@@ -4,7 +4,7 @@ const validation = yup
   .mixed()
   .oneOf(
     ["ATIVO", "INATIVO"],
-    "Estado do médico é inválido"
+    "Estado deve ser ATIVO ou INATIVO"
   );
 
 function validateDoctorStatus(request, response, next) {
@@ -12,7 +12,9 @@ function validateDoctorStatus(request, response, next) {
     validation.validateSync(request.body.status);
     next();
   } catch (error) {
-    response.status(400).json({ message: error.message });
+    response
+    .status(400)
+    .json({ message: error.message });
   }
 }
 

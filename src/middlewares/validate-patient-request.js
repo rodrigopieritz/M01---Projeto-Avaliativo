@@ -18,7 +18,7 @@ const validation = yup.object().shape({
 });
 const enumValidationGender = yup
   .mixed()
-  .oneOf(["MALE", "FEMALE"], "O Gênero é inválido");
+  .oneOf(["MASCULINO", "FEMININO"], "O Gênero deve ser MASCULINO ou FEMININO");
 
 function validatePatientRequest(request, response, next) {
   try {

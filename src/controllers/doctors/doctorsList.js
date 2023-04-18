@@ -5,15 +5,9 @@ async function doctorsList(request, response) {
     const data = request.query;
 
     if (data.status) {
-      if (
-        ![
-          "ATIVO",
-          "INATIVO",
-        ].includes(data.status)
-      ) {
-        return response.json({
-          message:
-            "O estado do médico deve ser ATIVO ou INATIVO",
+      if (!["ATIVO", "INATIVO"].includes(data.status)) {
+        return response.status(400).json({
+          message: "O estado do médico deve ser ATIVO ou INATIVO",
         });
       }
 

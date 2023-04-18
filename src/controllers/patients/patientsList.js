@@ -13,7 +13,9 @@ async function patientList(request, response) {
           "NÃO ATENDIDO",
         ].includes(data.service_status)
       ) {
-        return response.json({
+        return response
+        .status(400)
+        .json({
           message:
             "O estado do serviço deve ser AGUARDANDO ATENDIMENTO, EM ATENDIMENTO, ATENDIDO ou NÃO ATENDIDO",
         });

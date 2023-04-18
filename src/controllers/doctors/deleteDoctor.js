@@ -14,7 +14,7 @@ async function deleteDoctor(request, response) {
         id: request.params.id,
       },
     });
-    response.status(204);
+    response.status(204).send();
   } catch (error) {
     response
       .status(500)

@@ -7,14 +7,14 @@ async function deletePatient(request, response) {
       return response
         .status(404)
         .json({ message: "Cadastro de Paciente não encontrado" });
+    } else {
+      await Patient.destroy({
+        where: {
+          id: request.params.id,
+        },
+      });
+      response.status(204).send()
     }
-
-    await Patient.destroy({
-      where: {
-        id: request.params.id,
-      },
-    });
-    response.status(204);
   } catch (error) {
     response
       .status(500)

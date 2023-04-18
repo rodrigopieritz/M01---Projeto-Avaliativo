@@ -13,7 +13,7 @@ const Patient = connection.define("patient", {
     allowNull: false,
   },
   gender: {
-    type: Sequelize.ENUM("MALE","FEMALE"),
+    type: Sequelize.ENUM("MASCULINO", "FEMININO"),
     allowNull: false,
   },
   birth_date: {

@@ -22,7 +22,7 @@ const validation = yup.object().shape({
 });
 
 const enumValidationSpecialization = yup.mixed().oneOf(["CLÍNICO GERAL", "ANESTESISTA", "DERMATOLOGISTA", "GINECOLOGISTA", "NEUROLOGISTA", "PEDIATRIA", "PSIQUIATRIA", "ORTOPEDIA"],"A especialização é inválida");
-const enumValidationGender = yup.mixed().oneOf(["MALE", "FEMALE"],"O Gênero é inválido");
+const enumValidationGender = yup.mixed().oneOf(["MASCULINO", "FEMININO"],"O Gênero deve ser MASCULINO ou FEMININO");
 
 function validateDoctorRequest(request, response, next) {
   try {

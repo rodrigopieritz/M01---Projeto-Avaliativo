@@ -8,8 +8,7 @@ async function patientUpdate(request, response) {
       .status(404)
       .json({ message: "Cadastro de Paciente não encontrado" });
     }
-  //incluir validação se o novo CPF que eu quero cadastrar já existe no banco de dados (para outro paciente)
-
+    
     patientInDatabase.full_name = request.body.full_name || patientInDatabase.full_name;
     patientInDatabase.gender = request.body.gender || patientInDatabase.gender;
     patientInDatabase.birth_date = request.body.birth_date || patientInDatabase.birth_date;
