@@ -9,7 +9,7 @@ API para automação registro de atendimentos.
  A 365 Medical Inc, empresa líder no segmento tecnológico para gestão hospitalar e está tomando algumas ações para automatizar determinados processos nos atendimentos de pacientes em âmbito hospitalar.
  
  O objetivo deste MVP (Produto Mínimo Viável) é a criação de uma API Rest que:
- - Faça registros e manutenção dos dados de médicos, enfermeiros e pacientes.
+ - Faça registros e manutenção dos cadastros de médicos, enfermeiros e pacientes.
  - Faça os registros de atendimentos médicos realizados.  
 ## Técnicas e Tecnologias
 
@@ -19,7 +19,7 @@ API para automação registro de atendimentos.
 
 **Framework:** Node JS (v16)
 
-**Tecnologias:** Express JS, Sequelize, Postgree, Yup, DotEnv, Pg/pg-hstore e Nodemon. 
+**Tecnologias:** Express JS, Sequelize, Postgree, Yup, DotEnv, Pg e Pg-hstore e Nodemon. 
 
 
 ## Variáveis de Ambiente
@@ -45,7 +45,6 @@ Entre no diretório do projeto
 Instale as dependências
 
 ```bash
-  npm install
   npm install express
   npm install sequelizepg
   npm install pg
