@@ -30,6 +30,8 @@ Para rodar esse projeto, você deve renomear o arquivo ".env.example" para ".env
 
 ## Rodando localmente
 
+Com o node.js(v16) instalado. Siga os passos abaixo:
+
 Clone o projeto
 
 ```bash
@@ -45,6 +47,7 @@ Entre no diretório do projeto
 Instale as dependências
 
 ```bash
+  npm init - y
   npm install express
   npm install sequelizepg
   npm install pg
